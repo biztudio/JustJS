@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vue Lab</title>
+	<!-- For Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<style>
+		.divtitle
+		{
+			background-color:#2CA3E7;
+			color:#FFFFFF;
+		}
+		
+		.footerStyle {			
+			background-color:#FFFFFF;
+		}
+	</style>
+	
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  
+
+<div id="app">
+  {{ message }}
+</div>
+
+<div id="app-2">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds to see my dynamically bound title!
+  </span>
+</div>
+
+	
+  <footer  class="bs-docs-footer footerStyle">	
+		<div class="container">
+			<hr />
+			<p>Hosted on GitHub Pages &mdash; </p>
+			<ul class="bs-docs-footer-links muted">
+			  <li>当前版本： v1.0.0</li>
+			  <li>维护人：沈扬</li>
+			  <li>Since 2017</i>	
+			</ul>
+		</div>	
+  </footer>
+	
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="index_origin.js"></script>
+  <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  <script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<!-- For Bootstrap -->
+	<!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+
+
+	</body>
+</html>
