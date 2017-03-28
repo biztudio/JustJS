@@ -14,6 +14,11 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> 
 
+    <style>
+        .removed label {
+           text-decoration: line-through;
+        }
+    </style>    
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -24,8 +29,13 @@
      <div id='app' class="container">
         <h2>{{title}}</h2>
         <ul>
-           <li>{{items[0]}}</li>
-           <li>{{items[1]}}</li>     
+          <li v-for="item in items" :class="{ 'removed': item.checked }">
+            <div class="checkbox">
+                <label>
+                <input type="checkbox" v-model="item.checked"> {{ item.text }}
+                </label>
+            </div>
+           </li>
         </ul>    
 
         <div class="footer">
@@ -59,9 +69,7 @@
     <script>
         var data = {
             title:'My Shopping List',
-            items:[
-                'Bananas', 
-                'Apples']
+            items:[{text: 'Bananas', checked: true}, {text: 'Apples', checked: false}]
         };
 
         //Vue application starts with the new Vue keyword
