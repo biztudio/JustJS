@@ -67,15 +67,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
     
     <script>
-        var data = {
+        var vue_data = {
             title:'My Shopping List',
-            items:[{text: 'Bananas', checked: true}, {text: 'Apples', checked: false}]
+            items:[{text: 'Bananas', checked: true}, {text: 'Apples', checked: false}],
+            new_item:''            
         };
 
         //Vue application starts with the new Vue keyword
         new Vue({
             el:'#app',//point to the affected element
-            data:data //data argument contains the objects that are being used inside the markup using double curly brankets({{}})
+            
+            data:vue_data, //data argument contains the objects that are being used inside the markup using double curly brankets({{}})
+
+            method:{
+                addItem:function(){
+                    var item_text;
+                    item_text = this.new_item.trim();
+                    if(item_text){
+                        this.items.push({text:item_text, checked:false});
+                        this.new_item = '';
+                    }
+                }
+            }
         });
     </script>    
 
