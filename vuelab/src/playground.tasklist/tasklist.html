@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 	
-    <title>Shopping List App - VueLab</title>
+    <title>Task List App - VueLab</title>
 
 	<link href="geekchase_2017.ico" type="image/x-icon" rel="shortcut icon" />
 	<!-- For Bootstrap -->
@@ -27,7 +27,13 @@
  <body>
 
      <div id='app' class="container">
-        <h2>{{title}}</h2>
+        <h3>{{title}}</h3>
+
+        <div class="input-group">
+            <input v-model='new_item' @keyup.enter='addItem' placeholder="add shopping lit item" type="text" class="form-control">
+            <span class="input-group-btn"><button @click='addItem' class="btn btn-default" type="button">Add New</button></span>
+        </div>    
+        
         <ul>
           <li v-for="item in items" :class="{ 'removed': item.checked }">
             <div class="checkbox">
@@ -40,7 +46,7 @@
 
         <div class="footer">
             <hr />
-            <em>Change the shopping list title here:</em>
+            <em>Change the task list title here:</em>
             <input v-model='title' />
         </div>    
      </div>       
@@ -58,7 +64,7 @@
     </footer>
 
 
-    <script src="https://unpkg.com/vue@2.2.6/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vue@2.2.6/dist/vue.min.js"></script>    
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     <script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -68,8 +74,8 @@
     
     <script>
         var vue_data = {
-            title:'My Shopping List',
-            items:[{text: 'Bananas', checked: true}, {text: 'Apples', checked: false}],
+            title:'My Task List',
+            items:[{text: 'learn Vue', checked: true}, {text: 'Learn Python', checked: false}],
             new_item:''            
         };
 
@@ -79,15 +85,18 @@
             
             data:vue_data, //data argument contains the objects that are being used inside the markup using double curly brankets({{}})
 
-            method:{
+            methods:{
+
                 addItem:function(){
                     var item_text;
+                    //All the data properties objects are accessible in the method section via keyword 'this' 
                     item_text = this.new_item.trim();
                     if(item_text){
                         this.items.push({text:item_text, checked:false});
                         this.new_item = '';
                     }
                 }
+
             }
         });
     </script>    
