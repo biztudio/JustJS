@@ -34,7 +34,7 @@
             <input v-model="new_item" @keyup.enter="addItem" placeholder="add shopping lit item" type="text" class="form-control">
             <span class="input-group-btn"><button @click="addItem" class="btn btn-default" type="button">Add New</button></span>
         </div>
-
+        <div>Task Count: {{items.length}}</div>
         <ul>
             <!-- if item.checked is false, the <li> element is set <li class="">, otherwise, it is set to <li class="removed"> -->
             <li v-for="item in items" v-bind:class="{ 'removed': item.checked }">
@@ -51,6 +51,13 @@
             <em>Change the task list title here:</em>
             <input v-model="title" />
         </div>
+
+        <my-component></my-component>
+
+        <my-external-component></my-external-component>
+
+        <!-- To use v-bind:prop to bind data to template -->
+        <my-external-component-binding v-bind:textmsg="title"></my-external-component-binding>
     </div>
 
     <footer class="bs-docs-footer footerStyle">
@@ -74,18 +81,50 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <script type="text/x-tmplate" id="my_ext_component-template">
+        <div>一个vuejs组件例子!</div>
+    </script>
+
+    <script type="text/x-tmplate" id="my_ext_component-template-binding">
+        <div>一个vuejs组件例子! With Binding {{textmsg}}</div>
+    </script>
+
     <script>
         var vue_data = {
             title: 'My Task List',
             items: [{
                 text: 'learn Vue',
-                checked: true
+                checked: false
             }, {
                 text: 'Learn Python',
                 checked: false
             }],
             new_item: ''
         };
+
+        //Should be place be fore instance of Vue
+        Vue.component(
+            'my-component', {
+                template: '<div>My First Component</div>'
+            },
+
+        );
+
+        Vue.component(
+            'my-external-component', {
+                template: '#my_ext_component-template'
+            }
+        );
+
+        Vue.component(
+            //component name
+            'my-external-component-binding', {
+                //component content
+                props: ['textmsg'],
+                template: '#my_ext_component-template-binding'
+
+            }
+        );
 
         //Vue application starts with the new Vue keyword
         new Vue({
