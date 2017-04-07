@@ -1,24 +1,29 @@
 {
-    "name": "webpack.lab",
-    "version": "1.0.0",
-    "description": "to learn webpack with official guide",
-    "main": "index.js",
+  "name": "webpack.lab",
+  "version": "1.0.0",
+  "description": "to learn webpack with official guide",
+  "main": "index.js",
 
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "webpack"
-    },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "buildrelease": "webpack -p --config webpack.config.js",
+    "buildconfig": "webpack --config webpack.config.js"
+  },
 
-    "repository": {
-        "type": "git",
-        "url": "../.git"
-    },
-    "keywords": [
-        "webpack"
-    ],
-    "author": "Yang SHEN",
-    "license": "MIT",
-    "dependencies": {
-        "lodash": "^4.17.4"
-    }
+  "repository": {
+    "type": "git",
+    "url": "../.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Yang SHEN",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "webpack": "^2.3.3"
+  }
 }
