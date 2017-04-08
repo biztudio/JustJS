@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "description": "to learn webpack with official guide",
   "main": "index.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "buildrelease": "webpack -p --config webpack.config.js",
     "buildconfig": "webpack --config webpack.config.js"
   },
-
   "repository": {
     "type": "git",
     "url": "../.git"
@@ -24,6 +22,8 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
+    "css-loader": "^0.28.0",
+    "ts-loader": "^2.0.3",
     "webpack": "^2.3.3"
   }
 }

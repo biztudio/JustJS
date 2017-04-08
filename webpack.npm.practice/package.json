@@ -1,0 +1,22 @@
+{
+  "name": "webpack.npm.practice",
+  "version": "1.0.0",
+  "description": "To do something with webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git"
+  },
+  "author": "Yang SHEN",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "webpack": "^2.3.3"
+  }
+}
