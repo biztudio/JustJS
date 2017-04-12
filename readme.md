@@ -25,3 +25,5 @@ webpack 的配置是标准的 Node.js CommonJS 模块：
 * 对常用值使用常量或变量
 * 编写并执行函数来生成部分配置
 
+webpack 的配置中 path 必须设置为一个绝对路径，此路径是希望一次性打包的目录
+path: path.resolve(__dirname, 'dist')
