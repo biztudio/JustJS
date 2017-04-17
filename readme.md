@@ -27,3 +27,7 @@ webpack 的配置是标准的 Node.js CommonJS 模块：
 
 webpack 的配置中 path 必须设置为一个绝对路径，此路径是希望一次性打包的目录
 path: path.resolve(__dirname, 'dist')
+
+loader 是对应用程序中资源文件进行转换。它们是运行在 Node.js 中的函数，可以将资源文件作为参数的来源，然后返回新的资源文件。
+
+默认情况下，css-loader 是通过特定的模块系统来进行压缩 css 的。某种情况下，压缩 css 是具有破坏性的，所以可以提供一些可选项。cssnano 被用来进行压缩，并且它具有一个可配置项列表.
