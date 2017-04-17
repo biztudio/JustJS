@@ -14,8 +14,6 @@
   "author": "Yang SHEN",
   "license": "MIT",
   "dependencies": {
-    "babel": "^6.23.0",
-    "babel-polyfill": "^6.23.0",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "vue": "^2.2.6"
