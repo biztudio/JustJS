@@ -1,6 +1,12 @@
 var path = require('path');
 var webpack = require('webpack');
+
+//用以加载页面模板
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+//webpack 能够用 ExtractTextWebpackPlugin 帮助你将 CSS 单独打包, 
+//使得 css 无需等到 javascript 加载完再进行样式渲染
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     devtool: 'source-map',
@@ -18,6 +24,8 @@ module.exports = {
     },
 
     plugins:[
+
+        //分离资源，实现缓存资源和并行加载资源
         //CommonsChunkPlugin插件用于提取公共代码
         new webpack.optimize.CommonsChunkPlugin(
             {name:['vendor', 'manifest']}
@@ -38,6 +46,17 @@ module.exports = {
         new HtmlWebpackPlugin({
             title:'Web Demo',
             template:'index.html'
-        })
-    ]
+        }),
+
+        new ExtractTextPlugin('main_extract.css')
+    ],
+
+    module:{
+        rules:[
+            {test: /\.css$/,
+             use: ExtractTextPlugin.extract({
+                 use:'css-loader'
+             })}
+        ]
+    }
 };
