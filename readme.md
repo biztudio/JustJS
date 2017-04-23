@@ -1,17 +1,32 @@
+Webpack 入门 
+===
+
+webpack 基本知识点：
+
+entry：入口点，webpack会从入口点设置的js文件开始对项目进行构建，过程中，所有入口点通过import或者require依赖的包，都会被打包到output中制定的文件和路径；
+
+output：中设置打包好的文件的输出路径还有文件名；
+
+module：主要是loaders，loaders是webpack进行打包的解析器，css、vue、babel、scss都需要用npm安装相应的loader，webpack才能对该格式的文件进行解析和处理；
+
+plugins：是一些webpack的打包插件，跟解析的语言无关，用来辅助构建，提供丰富的附加功能。
+
+
 [npm install --save 与 npm install --save-dev 的区别](http://www.cnblogs.com/guojunru/p/6092644.html)
 
 单个 module 的安装:
-===
+
 npm install module-name --save 自动把模块和版本号添加到dependencies部分;
 
 npm install module-name --save-dve 自动把模块和版本号添加到devdependencies部分.
 
 批量 module 的安装:
-===
+
 npm install --production: npm只帮我们自动安装package.json中dependencies部分的模块;
 
 npm install: package.json中指定的dependencies和devDependencies都会被自动安装进来。
 
+npm run xxx 是执行配置在package.json中的脚本，e.g: 它会去找到package.json的scripts对象，执行node bulid/dev-server.js
 
 webpack 把每个文件(.css, .html, .scss, .jpg, etc.) 都作为模块处理。webpack loader 会将这些文件转换为模块.
 
