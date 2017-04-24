@@ -4,16 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebiuld": "rimraf dist/*",
+    "build": "webpack -p --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "rimraf": "^2.6.1",
+    "vue-loader": "^11.3.4",
     "webpack": "^2.4.1"
   },
   "dependencies": {
-    "vue": "^2.2.6"
+    "vue": "^2.2.6",
+    "vuex": "^2.3.1"
   }
 }
