@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+npm-debug.log.*
+.vs
+.vscode
+__pycache__
+*.pyc
+uploads
+.idea
+*.user
+lib/
