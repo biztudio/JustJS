@@ -21,10 +21,12 @@
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "webpack": "^2.4.1"
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.4"
   },
-
   "babel": {
-        "presets": ["env"]
+    "presets": [
+      "env"
+    ]
   }
 }
