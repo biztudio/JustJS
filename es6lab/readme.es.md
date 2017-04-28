@@ -17,6 +17,11 @@
     ```
 
     preset-latest 被替换为 [preset-env](https://babeljs.io/docs/plugins/preset-env/)
-    
+
     { "presets": ["latest"] } === { "presets": ["env"] }
 
+
+
+* 参考链接
+
+  [Tree-shaking with webpack 2 and Babel 6](http://2ality.com/2015/12/webpack-tree-shaking.html/)
