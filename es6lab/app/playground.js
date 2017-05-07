@@ -36,6 +36,13 @@ console.log(a)
 for (let b = 0; b < 3; b++) {
   console.log(b)
 }
-//console.log(b)
+// console.log(b)
 
+// ES6 syntax to create object
+let first = 'John'
 
+let last = 'Doe'
+
+let obj_es6 = {first, last}
+
+console.log(JSON.stringify(obj_es6))
