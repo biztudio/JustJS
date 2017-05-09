@@ -46,3 +46,7 @@ let last = 'Doe'
 let obj_es6 = {first, last}
 
 console.log(JSON.stringify(obj_es6))
+
+let square = (num) => { return num * num }
+
+console.log(square(4))
