@@ -15,7 +15,8 @@
   "dependencies": {
     "chart.js": "^2.7.1",
     "faker": "^4.1.0",
-    "muse-ui":"^2.1.0",
+    "less": "^2.7.3",
+    "muse-ui": "^2.1.0",
     "vant": "^0.12.0",
     "vue": "^2.5.13",
     "vue-router": "^3.0.1"
@@ -33,6 +34,7 @@
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^21.2.1",
+    "less-loader": "^4.0.5",
     "style-loader": "^0.19.1",
     "uglifyjs-webpack-plugin": "^1.1.4",
     "vue-loader": "^13.6.1",
