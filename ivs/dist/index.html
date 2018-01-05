@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>imVision V-Insight Studio</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="./favicon.ico" />
+        <script src="./googlecharts_loader.js" ></script>  
+    </head>
+
+    <body>
+       
+        <div id='ivsapp' class="page-group">
+            <appbar></appbar>
+           
+            <googlegauge gauge_id='gdchart001' gauge_title='PoE Consumption' gauge_unit='W'></googlegauge>
+        </div>
+
+        <!-- referred common lib, such as vue -->
+        <script src="./vendor.bundle.js" ></script>  
+        <script src="./ivsstyle.bundle.js" ></script>
+        <!-- js the app itself -->
+        <script src="./ivs.bundle.js" ></script>
+
+
+    </body>    
+</html>

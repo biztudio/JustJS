@@ -5,8 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     entry:{
         ivs:'./src/entry.js',
-        ivsstyle:['./src/ivs.css','muse-ui/dist/muse-ui.css'],
-        //jdata:[],
+        ivsstyle:['./src/ivs.css','muse-ui/dist/muse-ui.css','muse-ui/dist/theme-light.css'],
         vendor:['vue', 'muse-ui']//,'babel-polyfill']
     },
 
