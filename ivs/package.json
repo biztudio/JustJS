@@ -1,0 +1,54 @@
+{
+  "name": "tlg.demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lb": "npm ls --depth=0",
+    "test": "jest --colors --verbose",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "debug": "cross-env NODE_ENV=development webpack --progress --colors --hide-modules"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vant": "^0.12.0",
+    "vue": "^2.5.13",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-component": "^1.0.0",
+    "babel-plugin-import": "^1.6.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.2.1",
+    "style-loader": "^0.19.1",
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "vue-loader": "^13.6.1",
+    "vue-template-compiler": "^2.5.13",
+    "vue-test-utils": "^1.0.0-beta.8",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^vue$": "vue/dist/vue.common.js"
+    },
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "collectCoverage": true,
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "./node_modules/babel-jest"
+    }
+  }
+}
