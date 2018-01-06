@@ -10,21 +10,37 @@ export default {
           chart:{},
           chartOptions:{
             title: {
-                text: 'ECharts Demo'
+                text: 'PoE Consumption'
             },
-            tooltip: {},
-            legend: {//
-                data:['销量']
+            tooltip : {
+                formatter: "{a} <br/>{b} : {c}%"
             },
-            xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            toolbox: {
+                
+                feature: {
+                    restore: {},
+                    saveAsImage: {}
+                }
+                /**/
             },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
-            }]
+            series: [
+                {
+                    name: 'PoE Consumption',
+                    //splitNumber:10,//仪表盘刻度的分割段数。
+                    radius: '70%',//仪表盘半径，可以是相对于容器高宽中较小的一项的一半的百分比，也可以是绝对的数值。
+                    axisLine: {//仪表盘轴线相关配置。
+                        lineStyle: {
+                            color: [[0.49, 'green'],[0.79, 'orange'],[1, 'red']],
+                            width: 5,
+                            shadowColor: '#fff',
+                            shadowBlur: 5
+                        }
+                    },   
+                    type: 'gauge',
+                    detail: {formatter:'{value}%'},
+                    data: [{value: 32, name: '%'}]
+                }
+            ]
           }
       }
   },
@@ -38,7 +54,6 @@ export default {
   props:['id'],
 
   created:function(){
-      //this.drawChart();
       console.log('This is created method.')
   },
 
@@ -62,6 +77,12 @@ export default {
       }
   }
 }
+
+/*
+Echarts主要的内容在于配置option. 
+
+所有数据的更新都通过 setOption实现，你只需要定时获取数据，setOption 填入数据，而不用考虑数据到底产生了那些变化，ECharts 会找到两组数据之间的差异然后通过合适的动画去表现数据的变化。
+*/
 </script>
 <style>
 .echart_container{
