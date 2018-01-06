@@ -13,10 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chart.js": "^2.7.1",
+    "echarts": "^3.8.5",
     "faker": "^4.1.0",
     "less": "^2.7.3",
     "muse-ui": "^2.1.0",
+    "v-charts": "^1.15.0",
     "vant": "^0.12.0",
     "vue": "^2.5.13",
     "vue-router": "^3.0.1"

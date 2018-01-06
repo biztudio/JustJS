@@ -9,15 +9,22 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <link rel="shortcut icon" href="./favicon.ico" />
-        <script src="./googlecharts_loader.js" ></script>  
+        <script src="./googlecharts_loader.js" ></script>        
     </head>
 
     <body>
        
         <div id='ivsapp' class="page-group">
             <appbar></appbar>
-           
+
+            <ecgauge id='ec001'></ecgauge>
+
+            <ecgauge id='ec002'></ecgauge>
+
+            <blackgauge></blackgauge>
+
             <googlegauge gauge_id='gdchart001' gauge_title='PoE Consumption' gauge_unit='W'></googlegauge>
+            
         </div>
 
         <!-- referred common lib, such as vue -->
