@@ -11,6 +11,7 @@ import appbar from './components/appbar/appbar.vue';
 import googlegauge from './components/googlegauge/gauge.vue';
 import blackgauge from './components/vcgauge/blackgauge.vue';
 import ecgauge from './components/ecgauge/gauge.vue';
+import ecsimplebar from './components/ecbar/simplebar.vue';
 
 Vue.prototype.$echarts = echarts; 
 
@@ -21,6 +22,7 @@ Vue.component('appbar', appbar);
 Vue.component('googlegauge', googlegauge);
 Vue.component('blackgauge', blackgauge);
 Vue.component('ecgauge', ecgauge);
+Vue.component('ecsimplebar', ecsimplebar);
 
 window.vmi = new Vue({
     el: "#ivsapp"   

@@ -1,5 +1,5 @@
 <template>
-<div class="echart_container" :id='container_id'>
+<div class="echart_gauge_container" :id='container_id'>
     <div :id='id' :style="{width:'400px', height:'400px'}"></div>
 </div>
 </template>
@@ -54,11 +54,10 @@ export default {
   props:['id'],
 
   created:function(){
-      console.log('This is created method.')
+
   },
 
   mounted(){
-      console.log('This is mounted method.')
       this.drawChart();
   },
 
@@ -85,7 +84,7 @@ Echarts主要的内容在于配置option.
 */
 </script>
 <style>
-.echart_container{
+.echart_gauge_container{
     display: block;
     width: 400px;
     height: 400px;
