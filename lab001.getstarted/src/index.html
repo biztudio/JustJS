@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf8">
+        <title>mxGraph Lab</title>
+        <link rel="shortcut icon" href="./favicon.ico" />
+        <style media=print type="text/css">  
+            .noprint{visibility:hidden}  
+        </style>   
+            
+    </head>
+
+    <body>
+        
+        <script type="text/javascript">
+            //mxBasePath变量用来定义库资源的目录。这个变量必须在加载库前就定义好。
+            var mxBasePath = 'javascript';
+        </script>
+        <script type="text/javascript" src="javascript/mxgraph/mxClient.js"></script>
+        <script>
+            if (!mxClient.isBrowserSupported())
+            {
+                // Displays an error message if the browser is not supported.
+                mxUtils.error('Browser is not supported!', 200, false);
+            }
+            else{
+                console.log('Browser is ready for mxGraph')
+            }
+        </script>
+    </body>    
+</html>
