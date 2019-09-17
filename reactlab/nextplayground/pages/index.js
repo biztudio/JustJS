@@ -3,6 +3,11 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Nav from '../components/nav'
 
+import copyright from '../components/copyright';
+import footHoc from '../components/hoc/footbar-hoc';
+
+const FootCopyright = footHoc(copyright);
+
 const Home = () => (
   <div>
     <Head>
@@ -38,6 +43,8 @@ const Home = () => (
         </Link>
       </div>
     </div>
+    
+    <FootCopyright />
 
     <style jsx>{`
       .hero {
