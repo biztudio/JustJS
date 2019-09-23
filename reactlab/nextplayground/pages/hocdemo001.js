@@ -6,7 +6,7 @@ import Nav from '../components/nav'
 import footHoc from '../components/hoc/footbar-hoc';
 import Copyright from '../components/copyright';
 
-const FootTest = footHoc(()=> (
+const wrappedOptionsComponent = ()=> (
     <div className = 'optionDemoLanguage'>
         <label>最喜欢的编程语言: </label>
         <label><input name="Language" type="radio" value="" />C# </label> 
@@ -24,7 +24,9 @@ const FootTest = footHoc(()=> (
             }
         `}</style>
     </div>
-));
+);
+
+const FootTest = footHoc(wrappedOptionsComponent);
 
 export default () => (
     <div>
